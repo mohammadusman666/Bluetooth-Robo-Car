@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarControl">
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/joystickView"
+        custom:JV_buttonColor="#FFFFFF"
+        custom:JV_buttonSizeRatio="15%"
+        custom:JV_borderColor="#FF0000"
+        custom:JV_backgroundColor="#FF2D2D"
+        custom:JV_borderWidth="4dp"
+        custom:JV_fixedCenter="false"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/joystickView"
+    >
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fr"
+        android:id="@+id/left"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:rotation="270"
+        android:layout_toLeftOf="@+id/fr"
+
+        android:background="@drawable/button" />
+    <Button
+        android:layout_width="60dp"
+        android:id="@+id/fr"
+        android:layout_height="60dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button" />
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/back"
+        android:rotation="180"
+        android:layout_below="@+id/left"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button" />
+    <Button
+        android:layout_width="60dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fr"
+        android:id="@+id/rite"
+        android:layout_centerHorizontal="true"
+        android:rotation="90"
+        android:layout_toRightOf="@+id/fr"
+        android:background="@drawable/button" />
+</RelativeLayout>
+
+
+</RelativeLayout>
